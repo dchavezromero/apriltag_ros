@@ -124,6 +124,12 @@ target_link_libraries(${PROJECT_NAME}_single_image_client_node ${PROJECT_NAME}_c
 ## Install ##
 #############
 
+catkin_install_python(PROGRAMS
+   scripts/cv_ros.py
+   scripts/camera_info.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h"
