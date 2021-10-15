@@ -18,4 +18,6 @@
   </node>
   <node pkg="apriltag_ros" type="camera_info.py" name="camera_info" />
   <node pkg="apriltag_ros" type="cv_ros.py" name="camera_topic" />
+
+  <node pkg="tf" type="static_transform_publisher" name="camera_to_world" args="0 0 0 0 0 0 /camera /world 100" />
 </launch>
