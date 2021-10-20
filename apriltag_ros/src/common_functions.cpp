@@ -389,9 +389,11 @@ AprilTagDetectionArray TagDetector::detectTags (
       pose.header = tag_detection_array.detections[i].pose.header;
       tf::Stamped<tf::Transform> tag_transform;
       tf::poseStampedMsgToTF(pose, tag_transform);
+
+      // ROS_DEBUG(image->header.frame_id);
       tf_pub_.sendTransform(tf::StampedTransform(tag_transform,
-                                                 tag_transform.stamp_,
-                                                 "camera",
+                                                 ros::Time::now(),
+                                                 camera_info->header.frame_id,
                                                  detection_names[i]));
     }
   }
