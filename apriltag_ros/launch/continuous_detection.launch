@@ -28,6 +28,6 @@
   <node pkg="apriltag_ros" type="camera_info.py" name="camera_info" />
   <node pkg="apriltag_ros" type="cv_ros.py" name="camera_topic" />
 
-  <node pkg="tf" type="static_transform_publisher" name="world_to_usb_cam" args="0.088 0 0.9259 -1.571 0 -1.571 /world /usb_cam 100" />
+  <node pkg="tf" type="static_transform_publisher" name="world_to_usb_cam" args="0.252583559435 0 1.023 -1.571 0 -1.571 /world /usb_cam 100" />
   <!-- <node pkg="tf" type="static_transform_publisher" name="usb_cam_to_world" args="0 0 0 0 0 0 /usb_cam /world 100" /> -->
 </launch>
